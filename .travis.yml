@@ -10,3 +10,6 @@ matrix:
   include:
     - env: PROJECT=service-a
     - env: PROJECT=weather-service
+
+before_install:
+  - "cd ${TRAVIS_BUILD_DIR}/${PROJECT}"
