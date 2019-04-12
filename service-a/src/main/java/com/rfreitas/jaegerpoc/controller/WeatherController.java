@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/")
 public class WeatherController {
 
-  @Autowired
-  private WeatherService weatherService;
+  @Autowired private WeatherService weatherService;
 
   @GetMapping("/hello")
   public String hello() {

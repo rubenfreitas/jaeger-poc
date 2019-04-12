@@ -1,3 +1,10 @@
 language: java
+
+sudo: false
+
 jdk: 
   - openjdk12
+
+matrix:
+  include:
+    - env: PROJECT=service-a
