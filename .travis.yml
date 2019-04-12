@@ -8,3 +8,4 @@ jdk:
 matrix:
   include:
     - env: PROJECT=service-a
+    - env: PROJECT=weather-service
