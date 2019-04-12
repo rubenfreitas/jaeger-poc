@@ -1,5 +1,5 @@
 # jaeger-poc
-
+[![Build Status](https://travis-ci.org/rubenfreitas/jaeger-poc.svg?branch=master)](https://travis-ci.org/rubenfreitas/jaeger-poc)
 ## Prerequisites
 This POC uses CNCF Jaeger (https://jaegertracing.io) as the tracing backend.
 For this POC, first start Jaeger via Docker with the default in-memory storage, exposing only the required ports. We'll also enable "debug" level logging:
