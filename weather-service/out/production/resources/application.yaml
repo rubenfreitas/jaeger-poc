@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: weather-service
-server:
-  port: 9001
-opentracing:
-  jaeger:
-    log-spans: false
-    service-name: ${spring.application.name}

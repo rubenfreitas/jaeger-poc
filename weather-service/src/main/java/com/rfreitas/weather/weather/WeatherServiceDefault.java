@@ -16,10 +16,10 @@ import org.springframework.web.util.UriTemplate;
 public class WeatherServiceDefault implements WeatherService {
 
   private static final String WEATHER_URL =
-      "http://api.openweathermap.org/data/2.5/weather?q={city},{country}&APPID={key}";
+      "http://api.openweathermap.org/data/2.5/weather?q={city},{country}&APPID={key}&units=metric";
 
   private static final String FORECAST_URL =
-      "http://api.openweathermap.org/data/2.5/forecast?q={city},{country}&APPID={key}";
+      "http://api.openweathermap.org/data/2.5/forecast?q={city},{country}&APPID={key}&units=metric";
 
   private final RestTemplate restTemplate;
 
@@ -27,7 +27,7 @@ public class WeatherServiceDefault implements WeatherService {
 
   public WeatherServiceDefault(RestTemplateBuilder restTemplateBuilder) {
     this.restTemplate = restTemplateBuilder.build();
-    apiKey = "96c9189b4377490de31ea173a120bbc5";
+    apiKey = "996a5b31833bbb7d287fbc905c9b1e10";
   }
 
   @Override

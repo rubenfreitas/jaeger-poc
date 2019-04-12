@@ -17,7 +17,7 @@ public class WeatherController {
   private final WeatherService weatherService;
 
   @GetMapping("/current/{country}/{city}")
-  public String getWeatherFor(@PathVariable String country, @PathVariable String city) {
+  public String getCurrentWeather(@PathVariable String country, @PathVariable String city) {
     log.info("getting current weather for country={} city={}", country, city);
     var weather = weatherService.getWeather(country, city);
     return String.valueOf(weather.getTemperature());
