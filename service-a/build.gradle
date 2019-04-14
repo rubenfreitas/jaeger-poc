@@ -19,7 +19,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	runtimeClasspath 'com.h2database:h2:1.4.199'
+	runtime 'com.h2database:h2:1.4.199'
 	implementation 'io.opentracing.contrib:opentracing-spring-web-starter:1.1.1'
 	implementation 'io.opentracing.contrib:opentracing-jdbc:0.0.12'
 	implementation 'io.opentracing.contrib:opentracing-spring-jaeger-web-starter:1.0.3'
