@@ -25,7 +25,7 @@ public class WeatherEntry implements Serializable {
   }
 
   /**
-   * Return the temperature in Kelvin (K).
+   * Return the temperature in Celsius (C).
    */
   public double getTemperature() {
     return this.temperature;

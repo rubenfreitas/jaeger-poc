@@ -1,7 +1,6 @@
 package com.rfreitas.weather.weather;
 
 import java.net.URI;
-import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.MediaType;
@@ -31,10 +30,8 @@ public class WeatherServiceDefault implements WeatherService {
   }
 
   private <T> T invoke(URI url, Class<T> responseType) {
-    RequestEntity<?> request = RequestEntity.get(url)
-        .accept(MediaType.APPLICATION_JSON).build();
-    ResponseEntity<T> exchange = this.restTemplate
-        .exchange(request, responseType);
+    RequestEntity<?> request = RequestEntity.get(url).accept(MediaType.APPLICATION_JSON).build();
+    ResponseEntity<T> exchange = this.restTemplate.exchange(request, responseType);
     return exchange.getBody();
   }
 

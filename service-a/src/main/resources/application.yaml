@@ -1,8 +1,16 @@
 spring:
   application:
     name: service-a
+  h2:
+    console:
+      enabled: true
+  datasource:
+    hikari:
+      driver-class-name: io.opentracing.contrib.jdbc.TracingDriver
+      jdbc-url: jdbc:tracing:h2:mem:test?traceWithActiveSpanOnly=true
 server:
   port: 9000
+
 opentracing:
   jaeger:
     service-name: ${spring.application.name}
