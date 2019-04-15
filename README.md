@@ -22,3 +22,25 @@ set KAFKA_ADVERTISED_HOST_NAME in docker-compose-single-broker.yml to correct do
 ```
 docker-compose -f docker-compose-single-broker.yml up
 ```
+
+Start both services:
+```bash
+
+$ cd service-a/
+$ ./gradlew bootRun
+```
+```bash
+$ cd weather-service/
+$ ./gradlew bootRun
+
+```
+
+curl:
+```bash
+curl localhost:9000/api/random/temps
+```
+
+check JeagerUI:
+```bash
+http://localhost:16686/
+```
